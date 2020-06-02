@@ -1,0 +1,30 @@
+memory {
+  .memory-container {
+    position: relative;
+    overflow: hidden;
+    height: 890px;
+    width: 650px;
+
+    & > .move-container {
+      position: absolute;
+      transition: all 1s ease;
+      top: -130%;
+      left: 0
+    }
+
+    & > .move-container.ease-in {
+      transition: all 1s ease;
+      top: 0;
+    }
+  }
+}
+
+@keyframes memory-move {
+  0% {
+    padding-right: 100%;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}

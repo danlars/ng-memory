@@ -1,0 +1,19 @@
+<div class="memory-container">
+  <div class="move-container" ng-class="{'ease-in': vm.showContainer}">
+    <div class="grid grid-rows-4 grid-flow-col gap-4 pt-5">
+      <div class="text-center brick-container" ng-repeat="img in ::vm.getBricks() track by $index">
+        <brick class="inline-block"
+               glow="vm.lastClick === $index"
+               image-src="{{img}}"
+               selected="vm.isSelected($index, img)"
+               on-select="vm.onSelect($index, img)"
+               matched="vm.isMatched($index, img)">
+        </brick>
+      </div>
+    </div>
+    <div class="flex justify-center pt-3">
+      <div class="bg-yellow-400 py-2 px-4 rounded text-gray-700">CLICKS: <span class="font-bold">{{vm.getClicks()}}</span></div>
+      <div class="ml-4 bg-black py-2 px-4 rounded text-yellow-400">TIME USED: <span class="font-bold text-gray-600">{{vm.getTimerStatus()}}</span></div>
+    </div>
+  </div>
+</div>

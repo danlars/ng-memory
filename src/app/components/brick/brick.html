@@ -1,0 +1,12 @@
+<div class="mask-container">
+  <!-- Prevent image drag effect -->
+  <div class="mask" ng-click="!vm.isMatched() && vm.onClick()" ng-class="{'glow': vm.glow}"></div>
+  <img ng-src="{{vm.imageSrc}}"
+       class="ng-hide brick-img brick-front"
+       ng-show="vm.isMatched() || vm.isSelected()"
+       alt="Image"/>
+  <img ng-src="{{vm.imageCover}}"
+       class="ng-hide brick-img brick-back"
+       ng-show="!vm.isMatched() && !vm.isSelected()"
+       alt="Brick Cover"/>
+</div>
