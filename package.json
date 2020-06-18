@@ -12,7 +12,7 @@
   "author": "Daniel Larsen",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.7.0",
+    "angular": "^1.8.0",
     "angular-animate": "^1.7.0",
     "lodash": "^4.17.15"
   },
